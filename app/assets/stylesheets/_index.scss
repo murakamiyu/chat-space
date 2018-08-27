@@ -1,0 +1,60 @@
+
+
+.wrapper {
+
+}
+
+// .notification {
+// 	height: 10px;
+// 	width: 100px;
+// 	background-color: #38AEF0; 
+// }
+
+.side-bar {
+	width: 300px;
+	box-sizing: border-box;
+	float: left;
+}
+
+.side-bar .header {
+	background-color: #253141; 
+	height: 100px;
+	line-height: 100px;
+	padding: 0 20px;
+}
+
+.side-bar .group {
+	background-color: #2f3e51;
+	height: calc(100vh - 100px);
+	padding: 0 20px;
+}
+
+.chat {
+	background-color: blue;
+	width: calc(100vw - 300px);
+	float: left;
+}
+
+.chat .header { 
+	background-color: red;
+	box-sizing: border-box;
+	height: 100px;
+	padding: 0 40px;
+	border-color: black;
+	border-bottom: 5px;
+}
+
+.chat .messages {
+	background-color: #AAAAAA;
+	box-sizing: border-box;
+	height:  calc(100vh - 100px - 50px);
+	padding: 0 40px;
+	overflow: scroll;
+}
+
+.chat .form {
+	background-color: green;
+	box-sizing: border-box;
+	height: 50px;
+	padding: 20px 40px;
+}
