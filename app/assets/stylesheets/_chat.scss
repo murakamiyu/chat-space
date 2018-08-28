@@ -43,7 +43,7 @@
   &__upper {
    display: flex;		
    &__user-name {
-    color: #434A54;
+    color: $chat_font_color;
     font-size: 16px;
     font-weight: bold;
    }
@@ -55,7 +55,7 @@
   }		
  }
  &__lower-content {
-  color: #434A54;
+  color: $chat_font_color;
   font-size: 14px;
  }
 }	
@@ -73,7 +73,7 @@
   color: #434A54;
   font-size: 16px;
   line-height: 50px;
-  &__p {
+  p {
    padding-left: 10px;
   }
  }
@@ -83,7 +83,7 @@
   line-height: 50px;
  }
  &__bottun {
-  background-color: #38AEF0;
+  background-color: $bottun_color;
   font-size: 16px;
   line-height: 50px;
   margin-left: 15px;
