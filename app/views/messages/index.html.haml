@@ -1,0 +1,39 @@
+.notification
+ チャットグループが作成されました。
+
+	
+.side-bar
+ .side-bar__header
+  USER_NAME
+  .side-bar__header__lists
+   %ul
+   %li
+    %a{:href => "/"}
+     %i.fa.fa-pencil-square-o
+   %li
+    %a{:href => "/"}
+     %i.fa.fa-cog
+		
+ .side-bar__groups
+  = render partial: "side-bar"
+
+
+.chat
+ .chat__header
+  .chat__header__left
+   .chat__header__left__title group_name
+   .chat__header__left__members Member : user_name
+  .chat__header__right
+   %a{:class => "edit", :href => "/" } Edit
+  
+ .chat__messages
+  = render partial: "chat-message"
+
+ .chat__form
+  .chat__form__query
+   %p type a message
+  %ul
+   %li
+    %i.fa.fa-picture-o
+  .chat__form__bottun
+   %a{:href => "/"} Send

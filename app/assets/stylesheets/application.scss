@@ -1,5 +1,7 @@
 @import "./reset";
-@import "./index"
-/*
- *= require font-awesome
- */
+@import "./mixin";
+@import "font-awesome";
+@import "./main";
+@import "./side-bar";
+@import "./chat";
+@import "./variables";
