@@ -1,6 +1,5 @@
 .notification
  チャットグループが作成されました。
-
 	
 .side-bar
  .side-bar__header
@@ -8,11 +7,11 @@
   .side-bar__header__lists
    %ul
    %li
-    %a{:href => "/"}
-     %i.fa.fa-pencil-square-o
+    = link_to "#" do
+     = fa_icon "pencil-square-o"
    %li
-    %a{:href => "/"}
-     %i.fa.fa-cog
+    　= link_to "#" do
+     = fa_icon "cog"
 		
  .side-bar__groups
   = render partial: "side-bar"
@@ -24,7 +23,8 @@
    .chat__header__left__title group_name
    .chat__header__left__members Member : user_name
   .chat__header__right
-   %a{:class => "edit", :href => "/" } Edit
+   = link_to "#" do
+    %p Edit
   
  .chat__messages
   = render partial: "chat-message"
@@ -34,6 +34,8 @@
    %p type a message
   %ul
    %li
-    %i.fa.fa-picture-o
+    = link_to "#" do
+     = fa_icon "picture-o"
   .chat__form__bottun
-   %a{:href => "/"} Send
+   = link_to "#" do
+    %p Send
