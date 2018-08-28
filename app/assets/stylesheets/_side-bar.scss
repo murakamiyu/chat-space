@@ -26,11 +26,11 @@
 　　padding: 20px 0px 40px;
 　　&__name{
 　　　font-size: 15px;
-　　　color: #FFFFFF;
+　　　color: $side_bar_font_color;
 　　}
 　　&__message{
 　　　font-size: 11px;
-　　　color: #FFFFFF;
+　　　color: $side_bar_font_color;
 　　　padding-top: 5px;
 　　　}
 　}
