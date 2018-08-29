@@ -1,0 +1,165 @@
+.notification {
+　 background-color: #38AEF0;
+ 　height: 20px;
+ 　width: 100%;
+ 　color: white;
+ 　font-size: 12px;
+ 　text-align: center; 
+}
+
+.side-bar {
+ 　width: 300px;
+ 　box-sizing: border-box;
+ 　float: left;
+}
+
+.side-bar .header {
+ 　background-color: #253141; 
+ 　height: 100px;
+ 　line-height: 100px;
+ 　padding: 0 20px;
+ 　h3 {
+  　color: white;
+  　display: inline-block;
+  　font-size: 16px;
+  　font-weight: bold;
+ 　}
+ 　.header__lists {
+  　display: flex;
+  　float: right;
+  　align-items: flex-end;
+  　li {
+   　　padding-left: 8px;
+  　}
+ 　}
+ 　.white {
+  　color: white;
+ 　}
+}
+
+.side-bar .groups {
+ 　background-color: #2f3e51;
+ 　height: calc(100vh - 100px);
+ 　padding: 0 20px; 
+}
+
+.group {
+ 　padding: 20px 0px 40px;
+ 　.group__name{
+  　font-size: 15px;
+  　color: #FFFFFF;
+ 　}
+ 　.group__message{
+  　font-size: 11px;
+  　color: #FFFFFF;
+  　padding-top: 5px;
+ 　}
+}
+
+.chat {
+ 　width: calc(100vw - 300px);
+ 　float: left;
+}
+
+.chat .header { 
+　 box-sizing: border-box;
+　 height: 100px;
+　 padding: 0 40px;
+　 border-color: black;
+　 border: 1px solid #eeeeee;
+}
+
+.left-header {
+　 float: left;
+　 .left-header__title {
+ 　 color: #333333;
+  　font-size: 20px; 
+  　padding-top: 35px;
+ 　}
+ 　.left-header__members {
+  　color: #999999;
+  　font-size: 12px; 
+  　padding-top: 15px;
+ 　}
+}
+
+.right-header {
+ 　color: #38AEF0;
+ 　margin-top: 28px;
+ 　padding: 0 20px;
+ 　height: 40px;
+ 　line-height: 40px;
+ 　border: 1px solid #38AEF0;
+ 　float: right;
+ 　.right-header__edit {
+  　color: #38AEF0;
+ 　}
+}
+
+.chat .messages {
+　 background-color: #AAAAAA;
+　 box-sizing: border-box;
+　 height:  calc(100vh - 100px - 90px);
+　 padding: 46px 40px 0;
+　 overflow: scroll;
+　 .message {
+ 　 margin-bottom: 40px;
+ 　}
+}
+
+.upper-massage {
+ 　display: flex;
+ 　.upper-massage__user-name {
+ 　 color: #434A54;
+ 　 font-size: 16px;
+ 　 font-weight: bold;
+ 　}
+ 　.upper-massage__date {
+  　color: #999999;
+  　font-size: 12px;
+  　float: right;
+  　padding-left: 10px;
+ 　}
+}
+
+.lower_message__content {
+　 color: #434A54;
+　 font-size: 14px;
+}
+
+.chat .form {
+　 box-sizing: border-box;
+　 height: 90px;
+　 padding: 20px 40px;	
+}
+
+.form-query {
+　 background-color: #f0f0f0;
+　 box-sizing: border-box;
+　 width: calc(100% - 125px);
+　 float: left;
+　 color: #434A54;
+　 font-size: 16px;
+　 line-height: 50px;
+　 p {
+ 　 padding-left: 10px;
+　 }
+}
+
+.form-icon {
+　 float: left;
+　 padding-right: 10px;
+　 line-height: 50px;
+}
+
+.form-bottun {
+　 background-color: #38AEF0;
+　 font-size: 16px;
+　 line-height: 50px;
+　 margin-left: 15px;
+　 padding: 0 20px;
+　 float: right;
+　 .send {
+ 　 color: white;
+ 　}
+}
