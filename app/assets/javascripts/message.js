@@ -1,12 +1,27 @@
 $(function(){
   function buildHTML(message){
-    var html = `= render @messages
+    var html = `<div class="message">
+    			    <div class="upper-message__user-name">
+				      ${message.name}
+				    </div>
+				    <div class="upper-message__date">
+				      ${message.created_at.strftime('%Y/%m/%d %H:%M')}
+				    </div>
+				  	<div class="lower-meesage" >
+				      ${message.content}
+				    </div>
+				    <div class="lower-message__image">
+				      ${message.image}
+				    </div>
+    			</div>
 			    `
     return html;
   }
-  $('.new_message').on('submit', function(e){
-    e.preventDefault();
-    console.log(this)
+
+  $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'slow');
+  
+  $('#new_message').on('submit', function(e){
+    e.preventDefault();  
     var formData = new FormData(this);
     var url = $(this).attr('action')
     $.ajax({
@@ -16,17 +31,14 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
+
     })
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.textbox').val('')
     })
     .fail(function(){
       alert('error');
     })
   })
 })
-
-// $('messages').animate({scrollTop: $('messages')[0].scrollHeight}, 'fast');
-// $("body").animate({scrollBottom:$('.messages').offset().top});

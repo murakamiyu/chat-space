@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
   def create
     @message = @group.messages.new(message_params)
     respond_to do |format|
-      format.html 
+      format.html {group_messages_path(@group)}
       format.json
     end
     if @message.save
