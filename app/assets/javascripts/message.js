@@ -3,27 +3,25 @@ $(function(){
  　　　　　　var image = "";
   	image = (message.image) ? `<img class="lower-message__image" src="${message.image}">: ""; `
     var html = `<div class="message">
-			<div class="upper-message">
-    			    <div class="upper-message__user-name">
-			      ${message.name}
-			    </div>
-			    <div class="upper-message__date">
-			     	${message.created_at}
-			    </div>
-			    </div>
-		　　　　　　　　　　　　　　　　<p class="lower-meesage__content" >
-			    ${message.content}
-		    　　　　　　　　　</p>
-			<div class="lower-message__image">
-			　　　　　　　　　${image}
-                   　　　　　　　　　 </div>
+	　　　　　　　　　　　　　　　　　　<div class="upper-message">
+    	　　　　　　　　　　　　　　　　　　　　　　<div class="upper-message__user-name">
+		　　　　　　　　${message.name}
+	　　　　　　　　　　　　　　　　　　　　　　　</div>
+	　　　　　　　　　　　　　　　　　　　　　　　<div class="upper-message__date">
+	　　　　　　　　　　　　　　　　　　　　　　　　　${message.created_at}
+	　　　　　　　　　　　　　　　　　　　　　　　　</div>
+	　　　　　　　　　　　　　　　　　　　　　　</div>
+		　　　　　　<p class="lower-meesage__content" >
+	　　　　　　　　　　　　　　　　　　　　　　　　　　${message.content}
+		   </p>
+	　　　　　　　　　　　　　　　　　　　　　　<div class="lower-message__image">
+		　　　　　　　　　　${image}
+                  　　</div>
     		</div>
 		`
     return html;
   }
 
-  
-  
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
