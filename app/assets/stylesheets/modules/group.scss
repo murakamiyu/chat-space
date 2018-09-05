@@ -96,17 +96,35 @@
       float: right;
       display: inline-block;
       cursor: pointer;
-
       &.chat-group-user__btn--add {
         color: #38aef0;
       }
-
       &.chat-group-user__btn--remove {
         color: #f05050;
       }
     }
   }
-
+  
+#chat-group-users {
+    padding: 0 15px;
+    line-height: 50px;
+    font-size: 14px;
+    height: 50px;
+    .chat-group-form {
+      &__field--left {
+        float: left;
+        width: 30%;
+        padding-right: 20px;
+        padding-left: 20px;
+        box-sizing: border-box;
+      }
+      &__field--right {
+        float: right;
+        width: 70%;
+      }
+    }
+ }
+  
   .chat-group-form__action-btn {
     display: inline-block;
     padding: 12px 20px;
