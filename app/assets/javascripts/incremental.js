@@ -31,11 +31,7 @@ $(function() {
     }
 
   $("#user-search-field").on("keyup", function() {
-  	// e.preventDefault();
     var input = $("#user-search-field").val();
-    // if (input !== " " ){
-    // 	var inputs = input
-    // }
     console.log(input);
 
     $.ajax({
@@ -66,7 +62,7 @@ $(function() {
    var userIdName = $(".user-search-add").data();
    console.log(userIdName);
  
-   // $(this).remove();
+   $(this).remove();
    appendMember(userIdName);
   })
   $(".chat-group-user-user").on('click',$("chat-group-user__btn"),function(){
