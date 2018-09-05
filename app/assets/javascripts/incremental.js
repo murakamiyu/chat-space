@@ -3,7 +3,7 @@ $(function() {
   var member_list = $(".chat-group-user-user")
 
   function appendUserList(user){
-    var html = `</li><div class="chat-group-user clearfix">
+    var html = `<div class="chat-group-user clearfix">
 	          <p class="chat-group-user__name">${user.name}</p>
 		  <a class="user-search-add chat-group-user__btn search-add chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</a>
 		</div>
@@ -12,9 +12,9 @@ $(function() {
    }
 
    function appendNoUser(){
-     var html = `</li><div class="chat-group-user clearfix">
-		   <p class="chat-group-user__name">一致するユーザーはいません</p>
-		 </div>
+     var html = `<div class="chat-group-user clearfix">
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<p class="chat-group-user__name">一致するユーザーはいません</p>
+　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</div>
 		`
      search_list.append(html);
    }
