@@ -14,8 +14,8 @@ $(function() {
    function appendNoUser(){
      var html = `<div class="chat-group-user clearfix">
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<p class="chat-group-user__name">一致するユーザーはいません</p>
-　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　</div>
-                `
+                  </div>
+                 `
      search_list.append(html);
    }
 
