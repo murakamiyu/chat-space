@@ -6,16 +6,16 @@ $(function() {
     var html = `<div class="chat-group-user clearfix">
 	          <p class="chat-group-user__name">${user.name}</p>
 		  <a class="user-search-add chat-group-user__btn search-add chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</a>
-		</div>
-	       `
+		 </div>
+	        `
      search_list.append(html);
    }
 
    function appendNoUser(){
      var html = `<div class="chat-group-user clearfix">
 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<p class="chat-group-user__name">一致するユーザーはいません</p>
-                  </div>
-                 `
+                 </div>
+                `
      search_list.append(html);
    }
 
