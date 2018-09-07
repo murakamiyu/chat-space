@@ -48,13 +48,9 @@ $(function(){
     .done(function(json) {
       var id = $('.message:last').data('messageId');
       var insertHTML ='';
-      // console.log(json.messages);
-      console.log(id);
       json.messages.forEach(function(message){
         if( message.id  > id ){
-          console.log(message.id);
           insertHTML += buildHTML(message);
-
         }
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
       });
