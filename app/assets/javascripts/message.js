@@ -28,11 +28,9 @@ $(function(){
     .done(function(json) {
       var id = $('.message:last').data('messageId');
       var insertHTML ='';
-      console.log(id)
       json.messages.forEach(function(message){
         if( message.id  > id ){
           insertHTML += buildHTML(message);
-          console.log(message.id)
         }
       });
       $('.messages').append(insertHTML);
@@ -59,7 +57,6 @@ $(function(){
     })
     .done(function(data){
       var html = buildHTML(data);
-      console.log(data)
       $('.messages').append(html)
       $('.form__submit').prop("disabled", false)
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast') 
