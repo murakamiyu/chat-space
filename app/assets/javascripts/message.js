@@ -1,5 +1,4 @@
 $(function(){
-  
   function buildHTML(message){
  　 var image = "";
   	    image = (message.image.url) ? `<img class="lower-message__image" src="${message.image.url}">` : "";
@@ -13,17 +12,15 @@ $(function(){
                     <p class="lower-meesage__content">${message.content}</p>
                       ${image}
                   </div>
-    		        </div>             
-	            `
+		</div>             
+	       `
     return html;
-
   }
 
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
-
     $.ajax({
       url: url,
       type: "POST",
@@ -31,16 +28,13 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
-
     })
     .done(function(data){
       var html = buildHTML(data);
       console.log(data)
       $('.messages').append(html)
       $('.form__submit').prop("disabled", false)
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
-      // $('.form__message').val('');
-      
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast') 
     })
     .fail(function(){
       alert('error');
