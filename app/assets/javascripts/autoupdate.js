@@ -20,7 +20,6 @@ $(function(){
 
   var interval = setInterval(function() {
     if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-  
     $.ajax({
       url: location.href,
       dataType: 'json'
@@ -41,6 +40,5 @@ $(function(){
     });
   } else {
     clearInterval(interval);
-   }}, 5 * 1000 );
-  
-  });
+  }}, 5 * 1000 );
+});
