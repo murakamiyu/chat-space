@@ -1,7 +1,7 @@
 $(function(){
   function buildHTML(message){
  　 var image　= (message.image.url) ? `<img class="lower-message__image" src="${message.image.url}">` : "";
-   var html =`<div class="message">
+   var html =`<div class="message" data-message-id="${message.id}">
                   <div class="upper-message">
                     <div class="upper-message__user-name">${message.name}</div> 
                     <div class="upper-message__date">${message.created_at}</div>
@@ -14,34 +14,6 @@ $(function(){
 	       `
     return html;
   }
-
-    $(function(){
-    setInterval(update, 5 * 1000);
-    });
-
-    function update(){
-    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
-    $.ajax({
-      url: location.href,
-      dataType: 'json'
-    })
-    .done(function(json) {
-      var id = $('.message:last').data('messageId');
-      var insertHTML ='';
-      json.messages.forEach(function(message){
-        if( message.id  > id ){
-          insertHTML += buildHTML(message);
-        }
-      });
-      $('.messages').append(insertHTML);
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
-    })
-    .fail(function(json) {
-      alert('自動更新に失敗しました');
-    });
-  };
- };
-});
 	
   $('.new_message').on('submit', function(e){
     e.preventDefault();
@@ -65,4 +37,36 @@ $(function(){
       alert('error');
     });
   });
+
+  var interval = setInterval(function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+  
+    $.ajax({
+      url: location.href,
+      dataType: 'json'
+    })
+    .done(function(json) {
+      var id = $('.message:last').data('messageId');
+      var insertHTML ='';
+      // console.log(json.messages);
+      console.log(id);
+      json.messages.forEach(function(message){
+        if( message.id  > id ){
+          console.log(message.id);
+          insertHTML += buildHTML(message);
+
+        }
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
+      });
+      $('.messages').append(insertHTML);
+    })
+    .fail(function(json) {
+      alert('自動更新に失敗しました');
+    });
+  } else {
+    clearInterval(interval);
+   }}, 2 * 1000 );
+
 });
+	
+	
