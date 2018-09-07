@@ -15,6 +15,36 @@ $(function(){
     return html;
   }
 
+    $(function(){
+    setInterval(update, 5 * 1000);
+    });
+
+    function update(){
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+    $.ajax({
+      url: location.href,
+      dataType: 'json'
+    })
+    .done(function(json) {
+      var id = $('.message:last').data('messageId');
+      var insertHTML ='';
+      console.log(id)
+      json.messages.forEach(function(message){
+        if( message.id  > id ){
+          insertHTML += buildHTML(message);
+          console.log(message.id)
+        }
+      });
+      $('.messages').append(insertHTML);
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast')
+    })
+    .fail(function(json) {
+      alert('自動更新に失敗しました');
+    });
+  };
+ };
+});
+	
   $('.new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
