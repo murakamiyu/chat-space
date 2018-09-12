@@ -45,6 +45,7 @@
     box-sizing: border-box;
     padding: 46px 40px 0;
     .message {
+      padding-bottom: 50px;
       .upper-message {
         display: flex;
         &__user-name {
