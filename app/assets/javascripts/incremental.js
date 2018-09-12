@@ -34,6 +34,7 @@ $(function() {
 
   $("#user-search-field").on("keyup", function() {
     var input = $("#user-search-field").val();
+    if (input.length !== 0){
     $.ajax({
       type: 'GET',
       url: '/users',
@@ -53,7 +54,7 @@ $(function() {
     })
     .fail(function() {
       alert("検索は失敗しました");
-    })
+    })}
   });
   $("#user-search-result").on('click', ".chat-group-user__btn--add",function(){
      var userIdName = $(".user-search-add").data();
