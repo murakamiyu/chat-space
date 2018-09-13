@@ -21,11 +21,10 @@ $(function() {
    }
 
    function appendMember(userIdName){
-     var html =`<div class="chat-group-user">
-                  <div class="chat-group-user-user clearfix">
-                  <p class="chat-group-user__name">${userIdName.userName}</p>
-                  <a class="user-search-add chat-group-user__btn chat-group-user__btn--remove" data-user-id="${userIdName.userId}" data-user-name="${userIdName.userName}">削除</a>
-                  </div>
+     var html =`<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+                  <input name='group[user_ids][]' type='hidden' value='${userIdName.userId}'>
+                  <p class='chat-group-user__name'>${userIdName.userName}</p>
+                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
                 </div>
                `
                console.log(html)
