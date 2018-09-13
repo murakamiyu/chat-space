@@ -77,8 +77,33 @@
     }
   }
 
+  .chat-group-user-user {
+    line-height: 50px;
+    font-size: 14px;
+    &:after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+    li {
+      color: white;
+      border-bottom: 1px solid #ddd;
+      p {
+        color: black;
+      }
+      a {
+        color: #f05050;
+      }
+    }
+  }
+
+  .chat-group-user-user-already {
+    line-height: 50px;
+    font-size: 14px;
+  }
+
   .chat-group-user {
-    padding: 0 15px;
+    // padding: 0 15px;
     line-height: 50px;
     font-size: 14px;
     border-bottom: 1px solid #ddd;
@@ -87,6 +112,8 @@
       clear: both;
       display: block;
     }
+
+  
 
     .chat-group-user__name {
       float: left;
